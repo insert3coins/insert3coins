@@ -54,19 +54,6 @@ STATUS   : ONLINE
 
 ### `> CABINET LINEUP`
 
-<div align="center">
-
-<a href="https://github.com/insert3coins/NEONAMP">
-  <img src="https://github-readme-stats.vercel.app/api/pin/?username=insert3coins&repo=NEONAMP&bg_color=0D0619&title_color=21E6C1&text_color=C9D1D9&icon_color=FF4F9A&border_color=21E6C1&border_radius=10" />
-</a>
-<a href="https://github.com/insert3coins/VoidCompass">
-  <img src="https://github-readme-stats.vercel.app/api/pin/?username=insert3coins&repo=VoidCompass&bg_color=0D0619&title_color=21E6C1&text_color=C9D1D9&icon_color=FF4F9A&border_color=21E6C1&border_radius=10" />
-</a>
-
-</div>
-
-<br>
-
 | CAB | GAME | HARDWARE |
 |:---:|:-----|:---------|
 | 🎵 | **[NEONAMP](https://github.com/insert3coins/NEONAMP)** — self-hosted Winamp-style web music player with a cyberpunk neon deck. Spectrum visualizer, 10-band EQ, OBS jukebox overlay, Twitch chat commands, EBU R128 loudness normalization | `JavaScript` `Node` `Web Audio` |
