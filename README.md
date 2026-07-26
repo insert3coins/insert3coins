@@ -90,7 +90,7 @@ STATUS   : ONLINE
 <!-- CABTABLE:START -->
 | CAB | GAME | HARDWARE |
 |:---:|:-----|:---------|
-| 🕹️ | **[pycommander](https://github.com/insert3coins/pycommander)** — No description yet. | `Python` `Batchfile` `PowerShell` |
+| 🕹️ | **[pycommander](https://github.com/insert3coins/pycommander)** — dual-pane file manager with synthwave theming, audio preview, session persistence | `Python` `Batchfile` `PowerShell` |
 | 🕹️ | **[TwitchStream](https://github.com/insert3coins/TwitchStream)** — A self-hosted Node.js toolkit for Twitch featuring OBS overlays, alerts, avatars, collectible cards, chat commands, moderation, points, clips, stream screens, and automation. | `HTML` `JavaScript` `CSS` |
 | 🧭 | **[VoidCompass](https://github.com/insert3coins/VoidCompass)** — native Windows companion for Elite Dangerous. Live journal tracking, exploration / trade / fleet / engineering tools, HUD overlays, adaptive cockpit AI | `Python` `Qt` |
 | 🎵 | **[NEONAMP](https://github.com/insert3coins/NEONAMP)** — self-hosted Winamp-style web music player with a cyberpunk neon deck. Spectrum visualizer, 10-band EQ, OBS jukebox overlay, Twitch chat commands, EBU R128 loudness normalization | `JavaScript` `Node` `Web Audio` |
