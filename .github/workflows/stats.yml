@@ -50,6 +50,8 @@ jobs:
           ls -la assets/
           echo "--- generated card block ---"
           sed -n '/CABS:START/,/CABS:END/p' README.md
+          echo "--- generated table ---"
+          sed -n '/CABTABLE:START/,/CABTABLE:END/p' README.md
 
       - name: Commit if changed
         run: |

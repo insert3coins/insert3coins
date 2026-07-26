@@ -1,0 +1,26 @@
+{
+  "_comment": [
+    "Optional per-repo polish for the CAB | GAME | HARDWARE table.",
+    "Keyed by exact repo name. Every field is optional — anything you leave",
+    "out falls back to live GitHub data (description, topics, languages).",
+    "A brand-new repo needs NO entry here: it appears automatically with the",
+    "default icon and its own description. Add an entry only when you want",
+    "a custom icon, a richer blurb, or hand-picked hardware tags.",
+    "",
+    "  icon      emoji shown in the CAB column      (default: joystick)",
+    "  blurb     replaces the repo description      (default: description)",
+    "  hardware  list of tags for HARDWARE column   (default: topics, then languages)"
+  ],
+
+  "NEONAMP": {
+    "icon": "🎵",
+    "blurb": "self-hosted Winamp-style web music player with a cyberpunk neon deck. Spectrum visualizer, 10-band EQ, OBS jukebox overlay, Twitch chat commands, EBU R128 loudness normalization",
+    "hardware": ["JavaScript", "Node", "Web Audio"]
+  },
+
+  "VoidCompass": {
+    "icon": "🧭",
+    "blurb": "native Windows companion for Elite Dangerous. Live journal tracking, exploration / trade / fleet / engineering tools, HUD overlays, adaptive cockpit AI",
+    "hardware": ["Python", "Qt"]
+  }
+}

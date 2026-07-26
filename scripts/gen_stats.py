@@ -60,6 +60,7 @@ query($login: String!, $cursor: String) {
         stargazerCount
         forkCount
         primaryLanguage { name color }
+        repositoryTopics(first: 10) { nodes { topic { name } } }
         languages(first: 12, orderBy: {field: SIZE, direction: DESC}) {
           edges { size node { name color } }
         }
@@ -373,30 +374,85 @@ def render_cabs(repos, login, branch):
     return "\n".join(out)
 
 
+TABLE_START = "<!-- CABTABLE:START -->"
+TABLE_END   = "<!-- CABTABLE:END -->"
+
+OVERRIDES_FILE = "cabinet.json"
+DEFAULT_ICON = "🕹️"
+
+
+def load_overrides():
+    """Optional per-repo icon/blurb, keyed by repo name. Missing file is fine."""
+    if not os.path.exists(OVERRIDES_FILE):
+        return {}
+    try:
+        with open(OVERRIDES_FILE, encoding="utf-8") as f:
+            return json.load(f)
+    except (json.JSONDecodeError, OSError) as e:
+        print(f"WARNING: could not read {OVERRIDES_FILE} ({e}) — using defaults.")
+        return {}
+
+
+def hardware_tags(node, limit=3):
+    """Prefer hand-picked repo topics; fall back to detected languages."""
+    topics = [t["topic"]["name"]
+              for t in node.get("repositoryTopics", {}).get("nodes", [])]
+    if topics:
+        return topics[:limit]
+    return [e["node"]["name"] for e in node["languages"]["edges"][:limit]]
+
+
+def cell(text):
+    """Markdown tables break on raw pipes and newlines."""
+    return (str(text or "").replace("|", "\\|")
+            .replace("\n", " ").replace("\r", " ").strip())
+
+
+def render_table(repos, overrides):
+    rows = ["", "| CAB | GAME | HARDWARE |", "|:---:|:-----|:---------|"]
+    for r in repos:
+        ov = overrides.get(r["name"], {})
+        icon = ov.get("icon", DEFAULT_ICON)
+        blurb = ov.get("blurb") or r.get("description") or "No description yet."
+        tags = ov.get("hardware") or hardware_tags(r)
+        hw = " ".join(f"`{cell(t)}`" for t in tags) or "`—`"
+        rows.append(f'| {icon} | **[{cell(r["name"])}]({r["url"]})** — '
+                    f'{cell(blurb)} | {hw} |')
+    rows.append("")
+    return "\n".join(rows)
+
+
+def replace_block(doc, start, end, payload, label):
+    if start not in doc or end not in doc:
+        print(f"  {label}: markers missing — skipped.")
+        return doc, False
+    head, rest = doc.split(start, 1)
+    _, tail = rest.split(end, 1)
+    return head + start + payload + end + tail, True
+
+
 def update_readme(repos, login, branch, path="README.md"):
-    """Replace everything between the CABS markers. Leaves the rest alone."""
+    """Rewrite the generated blocks. Everything outside markers is untouched."""
     if not os.path.exists(path):
         print(f"{path} not found — skipping injection.")
         return False
 
-    doc = open(path, encoding="utf-8").read()
-    if CABS_START not in doc or CABS_END not in doc:
-        print(f"Markers not found in {path} — skipping injection.\n"
-              f"  Add {CABS_START} and {CABS_END} where the cards should go.")
-        return False
+    original = open(path, encoding="utf-8").read()
+    doc = original
+    overrides = load_overrides()
 
-    head, rest = doc.split(CABS_START, 1)
-    _, tail = rest.split(CABS_END, 1)
-    updated = (head + CABS_START
-               + render_cabs(repos, login, branch)
-               + CABS_END + tail)
+    doc, ok_cards = replace_block(doc, CABS_START, CABS_END,
+                                  render_cabs(repos, login, branch), "cards")
+    doc, ok_table = replace_block(doc, TABLE_START, TABLE_END,
+                                  render_table(repos, overrides), "table")
 
-    if updated == doc:
+    if doc == original:
         print("README already up to date.")
         return False
 
-    open(path, "w", encoding="utf-8").write(updated)
-    print(f"README updated — {len(repos)} card(s) linked.")
+    open(path, "w", encoding="utf-8").write(doc)
+    print(f"README updated — cards:{ok_cards} table:{ok_table} "
+          f"({len(repos)} repo(s))")
     return True
 
 
