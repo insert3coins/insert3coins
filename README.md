@@ -10,6 +10,9 @@
     assets/langs.svg      generated  .github/workflows/stats.yml
     assets/calendar.svg   generated  .github/workflows/stats.yml
     assets/repo-*.svg     generated  .github/workflows/stats.yml
+
+  The CABS:START / CABS:END block below is rewritten automatically —
+  push a new public repo and it appears there on the next run.
     snake.svg (output br) generated  .github/workflows/snake.yml
 -->
 
@@ -63,16 +66,10 @@ STATUS   : ONLINE
 
 ### `> CABINET LINEUP`
 
-<div align="center">
-
-<a href="https://github.com/insert3coins/NEONAMP">
-  <img src="https://raw.githubusercontent.com/insert3coins/insert3coins/main/assets/repo-NEONAMP.svg" alt="NEONAMP" width="420" />
-</a>
-<a href="https://github.com/insert3coins/VoidCompass">
-  <img src="https://raw.githubusercontent.com/insert3coins/insert3coins/main/assets/repo-VoidCompass.svg" alt="VoidCompass" width="420" />
-</a>
-
-</div>
+<!-- CABS:START -->
+<!-- Everything between these markers is written by scripts/gen_stats.py.
+     Hand edits here get overwritten on the next run — edit outside them. -->
+<!-- CABS:END -->
 
 <br>
 

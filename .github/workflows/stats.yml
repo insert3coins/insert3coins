@@ -41,19 +41,25 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GH_USER: ${{ github.repository_owner }}
+          GH_BRANCH: ${{ github.event.repository.default_branch }}
+          MAX_CARDS: "6"
         run: python3 scripts/gen_stats.py
 
       - name: Show what was produced
-        run: ls -la assets/
+        run: |
+          ls -la assets/
+          echo "--- generated card block ---"
+          sed -n '/CABS:START/,/CABS:END/p' README.md
 
       - name: Commit if changed
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-          # -A stages the whole folder: new cards, updated cards, and any
-          # repo-*.svg left behind by a repo that was renamed or deleted.
-          git add -A assets/
+          # -A stages adds, edits AND deletions (pruned cards).
+          # README.md is included because the script rewrites the
+          # CABS:START/END block when repos are added or renamed.
+          git add -A assets/ README.md
 
           if git diff --staged --quiet; then
             echo "No change in stats — nothing to commit."

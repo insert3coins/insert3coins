@@ -47,13 +47,16 @@ query($login: String!, $cursor: String) {
     repositories(
       first: 100, after: $cursor,
       ownerAffiliations: OWNER, isFork: false,
-      orderBy: {field: STARGAZERS, direction: DESC}
+      orderBy: {field: PUSHED_AT, direction: DESC}
     ) {
       totalCount
       pageInfo { hasNextPage endCursor }
       nodes {
         name
         description
+        url
+        pushedAt
+        isArchived
         stargazerCount
         forkCount
         primaryLanguage { name color }
@@ -351,9 +354,71 @@ def card_calendar(d):
     return frame(W, H, "> CONTRIBUTION GRID :: LAST 365 DAYS", "\n".join(out))
 
 
+# ── README auto-injection ────────────────────────────────────────────────
+CABS_START = "<!-- CABS:START -->"
+CABS_END   = "<!-- CABS:END -->"
+
+
+def render_cabs(repos, login, branch):
+    """Build the generated card block that goes between the markers."""
+    base = (f"https://raw.githubusercontent.com/{login}/{login}"
+            f"/{branch}/assets")
+    out = ["", '<div align="center">', ""]
+    for r in repos:
+        out.append(f'<a href="{r["url"]}">')
+        out.append(f'  <img src="{base}/repo-{r["name"]}.svg" '
+                   f'alt="{esc(r["name"])}" width="420" />')
+        out.append("</a>")
+    out += ["", "</div>", ""]
+    return "\n".join(out)
+
+
+def update_readme(repos, login, branch, path="README.md"):
+    """Replace everything between the CABS markers. Leaves the rest alone."""
+    if not os.path.exists(path):
+        print(f"{path} not found — skipping injection.")
+        return False
+
+    doc = open(path, encoding="utf-8").read()
+    if CABS_START not in doc or CABS_END not in doc:
+        print(f"Markers not found in {path} — skipping injection.\n"
+              f"  Add {CABS_START} and {CABS_END} where the cards should go.")
+        return False
+
+    head, rest = doc.split(CABS_START, 1)
+    _, tail = rest.split(CABS_END, 1)
+    updated = (head + CABS_START
+               + render_cabs(repos, login, branch)
+               + CABS_END + tail)
+
+    if updated == doc:
+        print("README already up to date.")
+        return False
+
+    open(path, "w", encoding="utf-8").write(updated)
+    print(f"README updated — {len(repos)} card(s) linked.")
+    return True
+
+
+def prune_stale_cards(keep_names):
+    """Delete repo-*.svg for repos that no longer exist or were renamed."""
+    removed = []
+    for fn in os.listdir("assets"):
+        if not (fn.startswith("repo-") and fn.endswith(".svg")):
+            continue
+        if fn[5:-4] not in keep_names:
+            os.remove(os.path.join("assets", fn))
+            removed.append(fn)
+    for fn in removed:
+        print(f"pruned stale card: {fn}")
+    return removed
+
+
 def main():
     token = os.environ.get("GITHUB_TOKEN")
     login = os.environ.get("GH_USER", "insert3coins")
+    branch = os.environ.get("GH_BRANCH", "main")
+    max_cards = int(os.environ.get("MAX_CARDS", "6"))
     if not token:
         sys.exit("GITHUB_TOKEN is not set.")
 
@@ -370,16 +435,24 @@ def main():
             f.write(svg)
         written.append(path)
 
-    # one card per public source repo, capped at the top 6 by stars
-    for node in data["repo_nodes"][:6]:
-        if node["name"].lower() == login.lower():
-            continue          # skip the profile repo itself
+    # Filter FIRST, then slice — otherwise the profile repo eats a card slot.
+    # Already sorted most-recently-pushed first by the GraphQL query.
+    showable = [n for n in data["repo_nodes"]
+                if n["name"].lower() != login.lower() and not n["isArchived"]]
+    featured = showable[:max_cards]
+
+    for node in featured:
         path = f"assets/repo-{node['name']}.svg"
         with open(path, "w", encoding="utf-8") as f:
             f.write(card_repo(node))
         written.append(path)
 
+    prune_stale_cards({n["name"] for n in featured})
+    update_readme(featured, login, branch)
+
     print("wrote:\n  " + "\n  ".join(written))
+    print("featured (newest push first): "
+          + ", ".join(n["name"] for n in featured))
     print(json.dumps({k: v for k, v in data.items()
                       if k not in ("langs", "weeks", "repo_nodes")}, indent=2))
 
