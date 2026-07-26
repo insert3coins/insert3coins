@@ -1,0 +1,56 @@
+# Regenerates assets/stats.svg and assets/langs.svg from the GitHub API
+# and commits them back to this repo. No third-party services involved —
+# GITHUB_TOKEN is issued automatically to the job, no secret to configure.
+#
+# Place at: .github/workflows/stats.yml
+
+name: Generate Stats Cards
+
+on:
+  schedule:
+    - cron: "17 4 * * *"     # daily, 04:17 UTC
+  workflow_dispatch:          # manual "Run workflow" button
+  push:
+    branches: [main]
+    paths:
+      - "scripts/gen_stats.py"
+      - ".github/workflows/stats.yml"
+
+# Stop overlapping runs from fighting over the same commit
+concurrency:
+  group: stats-cards
+  cancel-in-progress: true
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Generate cards
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_USER: ${{ github.repository_owner }}
+        run: python3 scripts/gen_stats.py
+
+      - name: Commit if changed
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/stats.svg assets/langs.svg
+          if git diff --staged --quiet; then
+            echo "No change in stats — nothing to commit."
+          else
+            git commit -m "chore: refresh stats cards [skip ci]"
+            git push
+          fi

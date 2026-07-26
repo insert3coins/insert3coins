@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="260" height="40" viewBox="0 0 260 40"
+     role="img" aria-label="Twitch: insert3coins">
+  <defs>
+    <linearGradient id="bedge" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#FF4F9A"/>
+      <stop offset="100%" stop-color="#21E6C1"/>
+    </linearGradient>
+    <filter id="bglow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="1.6" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect x="1" y="1" width="258" height="38" rx="8"
+        fill="#1A0B2E" stroke="url(#bedge)" stroke-width="2"/>
+
+  <!-- twitch glyph -->
+  <g transform="translate(17,9) scale(0.92)" fill="#FF4F9A">
+    <path d="M4.265 0L1 3.265v14.47h4.735V21L9 17.735h2.735L18.265 12V0H4.265z
+             m12.53 11.265L14.53 13.53H12L9.735 15.795V13.53H7.06V1.47h9.735v9.795z"/>
+    <path d="M13.265 4.265h-1.47v4.47h1.47v-4.47z M9.735 4.265H8.265v4.47h1.47v-4.47z"/>
+  </g>
+
+  <text x="52" y="18" font-family="'Share Tech Mono','Consolas','Courier New',monospace"
+        font-size="9" fill="#6E5A8A" letter-spacing="2">LIVE ON TWITCH</text>
+  <text x="52" y="31" font-family="'Share Tech Mono','Consolas','Courier New',monospace"
+        font-size="13" fill="#21E6C1" letter-spacing="1" filter="url(#bglow)">insert3coins</text>
+
+  <circle cx="240" cy="20" r="5" fill="#FF4F9A">
+    <animate attributeName="opacity" values="1;0.25;1" dur="1.6s" repeatCount="indefinite"/>
+  </circle>
+</svg>

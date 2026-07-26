@@ -1,0 +1,117 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="220" viewBox="0 0 880 220"
+     role="img" aria-label="INSERT 3 COINS">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#1A0B2E"/>
+      <stop offset="55%"  stop-color="#0D0619"/>
+      <stop offset="100%" stop-color="#170A2A"/>
+    </linearGradient>
+
+    <linearGradient id="sun" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#FFB24D"/>
+      <stop offset="50%"  stop-color="#FF4F9A"/>
+      <stop offset="100%" stop-color="#21E6C1"/>
+    </linearGradient>
+
+    <linearGradient id="edge" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%"   stop-color="#21E6C1"/>
+      <stop offset="50%"  stop-color="#FF4F9A"/>
+      <stop offset="100%" stop-color="#FFB24D"/>
+    </linearGradient>
+
+    <pattern id="scan" width="4" height="4" patternUnits="userSpaceOnUse">
+      <rect width="4" height="1" fill="#21E6C1" opacity="0.05"/>
+    </pattern>
+
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="3" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+
+    <filter id="softglow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="7"/>
+    </filter>
+
+    <clipPath id="box"><rect x="1" y="1" width="878" height="218" rx="12"/></clipPath>
+  </defs>
+
+  <g clip-path="url(#box)">
+    <rect width="880" height="220" fill="url(#sky)"/>
+
+    <!-- starfield -->
+    <g fill="#FFFFFF">
+      <circle cx="80"  cy="34" r="1.1" opacity="0.7">
+        <animate attributeName="opacity" values="0.7;0.15;0.7" dur="3.1s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="212" cy="22" r="0.9" opacity="0.5">
+        <animate attributeName="opacity" values="0.5;0.1;0.5" dur="4.3s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="366" cy="40" r="1.0" opacity="0.6">
+        <animate attributeName="opacity" values="0.6;0.12;0.6" dur="2.7s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="640" cy="26" r="1.2" opacity="0.65">
+        <animate attributeName="opacity" values="0.65;0.15;0.65" dur="3.7s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="778" cy="44" r="0.9" opacity="0.45">
+        <animate attributeName="opacity" values="0.45;0.1;0.45" dur="5.1s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="510" cy="18" r="0.8" opacity="0.4">
+        <animate attributeName="opacity" values="0.4;0.08;0.4" dur="4.9s" repeatCount="indefinite"/>
+      </circle>
+    </g>
+
+    <!-- synthwave sun, sliced -->
+    <g transform="translate(440,132)">
+      <circle r="66" fill="url(#sun)" opacity="0.28" filter="url(#softglow)"/>
+      <g fill="url(#sun)">
+        <path d="M-66,-30 A66,66 0 0 1 66,-30 L66,-26 L-66,-26 Z"/>
+        <rect x="-66" y="-18" width="132" height="9"/>
+        <rect x="-66" y="-3"  width="132" height="7"/>
+        <rect x="-66" y="11"  width="132" height="5"/>
+        <rect x="-66" y="23"  width="132" height="4"/>
+      </g>
+    </g>
+
+    <!-- horizon grid -->
+    <g stroke="#21E6C1" stroke-width="1" opacity="0.35">
+      <line x1="0" y1="158" x2="880" y2="158"/>
+      <line x1="0" y1="168" x2="880" y2="168" opacity="0.8"/>
+      <line x1="0" y1="181" x2="880" y2="181" opacity="0.65"/>
+      <line x1="0" y1="197" x2="880" y2="197" opacity="0.5"/>
+      <line x1="0" y1="217" x2="880" y2="217" opacity="0.4"/>
+      <line x1="440" y1="158" x2="440" y2="220"/>
+      <line x1="440" y1="158" x2="330" y2="220" opacity="0.85"/>
+      <line x1="440" y1="158" x2="550" y2="220" opacity="0.85"/>
+      <line x1="440" y1="158" x2="185" y2="220" opacity="0.7"/>
+      <line x1="440" y1="158" x2="695" y2="220" opacity="0.7"/>
+      <line x1="440" y1="158" x2="10"  y2="220" opacity="0.55"/>
+      <line x1="440" y1="158" x2="870" y2="220" opacity="0.55"/>
+    </g>
+
+    <!-- title -->
+    <text x="440" y="96" text-anchor="middle" filter="url(#glow)"
+          font-family="'Orbitron','Share Tech Mono','Consolas',monospace"
+          font-size="54" font-weight="bold" letter-spacing="6" fill="#21E6C1">
+      INSERT 3 COINS
+    </text>
+
+    <!-- blinking prompt -->
+    <text x="440" y="128" text-anchor="middle"
+          font-family="'Share Tech Mono','Consolas','Courier New',monospace"
+          font-size="14" letter-spacing="5" fill="#FF4F9A">
+      PRESS START TO CONTINUE
+      <animate attributeName="opacity" values="1;1;0.12;0.12;1"
+               dur="1.9s" repeatCount="indefinite"/>
+    </text>
+
+    <!-- sweeping scan beam -->
+    <rect x="-260" y="0" width="260" height="220" opacity="0.06" fill="#21E6C1">
+      <animate attributeName="x" from="-260" to="880" dur="6.5s" repeatCount="indefinite"/>
+    </rect>
+
+    <rect width="880" height="220" fill="url(#scan)"/>
+  </g>
+
+  <rect x="1" y="1" width="878" height="218" rx="12"
+        fill="none" stroke="url(#edge)" stroke-width="2"/>
+</svg>
