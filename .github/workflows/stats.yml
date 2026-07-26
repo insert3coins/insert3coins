@@ -43,11 +43,18 @@ jobs:
           GH_USER: ${{ github.repository_owner }}
         run: python3 scripts/gen_stats.py
 
+      - name: Show what was produced
+        run: ls -la assets/
+
       - name: Commit if changed
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add assets/stats.svg assets/langs.svg
+
+          # -A stages the whole folder: new cards, updated cards, and any
+          # repo-*.svg left behind by a repo that was renamed or deleted.
+          git add -A assets/
+
           if git diff --staged --quiet; then
             echo "No change in stats — nothing to commit."
           else

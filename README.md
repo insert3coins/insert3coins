@@ -1,7 +1,16 @@
 <!--
-  insert3coins profile README
-  Drop this in a PUBLIC repo named exactly: insert3coins
-  Palette: cyan #21E6C1 | magenta #FF4F9A | amber #FFB24D | void #1A0B2E / #0D0619
+  insert3coins profile README — HYBRID EDITION
+
+  Third-party services kept ONLY where they don't touch the GitHub API
+  (capsule-render, readme-typing-svg, shields.io, komarev) — these were
+  never the ones failing.
+
+  Everything that DOES query the GitHub API is self-hosted in this repo:
+    assets/stats.svg      generated  .github/workflows/stats.yml
+    assets/langs.svg      generated  .github/workflows/stats.yml
+    assets/calendar.svg   generated  .github/workflows/stats.yml
+    assets/repo-*.svg     generated  .github/workflows/stats.yml
+    snake.svg (output br) generated  .github/workflows/snake.yml
 -->
 
 <div align="center">
@@ -54,6 +63,19 @@ STATUS   : ONLINE
 
 ### `> CABINET LINEUP`
 
+<div align="center">
+
+<a href="https://github.com/insert3coins/NEONAMP">
+  <img src="https://raw.githubusercontent.com/insert3coins/insert3coins/main/assets/repo-NEONAMP.svg" alt="NEONAMP" width="420" />
+</a>
+<a href="https://github.com/insert3coins/VoidCompass">
+  <img src="https://raw.githubusercontent.com/insert3coins/insert3coins/main/assets/repo-VoidCompass.svg" alt="VoidCompass" width="420" />
+</a>
+
+</div>
+
+<br>
+
 | CAB | GAME | HARDWARE |
 |:---:|:-----|:---------|
 | 🎵 | **[NEONAMP](https://github.com/insert3coins/NEONAMP)** — self-hosted Winamp-style web music player with a cyberpunk neon deck. Spectrum visualizer, 10-band EQ, OBS jukebox overlay, Twitch chat commands, EBU R128 loudness normalization | `JavaScript` `Node` `Web Audio` |
@@ -76,17 +98,26 @@ STATUS   : ONLINE
 
 ---
 
+### `> HIGH SCORES`
+
+<div align="center">
+
+<img src="https://raw.githubusercontent.com/insert3coins/insert3coins/main/assets/stats.svg" alt="stats" height="230" />
+<img src="https://raw.githubusercontent.com/insert3coins/insert3coins/main/assets/langs.svg" alt="language mix" height="230" />
+
+</div>
+
+---
+
 ### `> CONTRIBUTION GRID`
 
 <div align="center">
 
-<!-- Snake requires .github/workflows/snake.yml to have run at least once.
-     Broken image = the Action hasn't generated it yet. -->
 <img src="https://raw.githubusercontent.com/insert3coins/insert3coins/output/snake.svg" alt="contribution snake" />
 
 <br><br>
 
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=insert3coins&bg_color=0D0619&color=21E6C1&line=FF4F9A&point=FFB24D&area=true&area_color=21E6C1&hide_border=false&border_color=21E6C1&radius=10" alt="activity graph" />
+<img src="https://raw.githubusercontent.com/insert3coins/insert3coins/main/assets/calendar.svg" alt="contribution calendar" width="820" />
 
 </div>
 
