@@ -72,6 +72,9 @@ STATUS   : ONLINE
 <a href="https://github.com/insert3coins/pycommander">
   <img src="https://raw.githubusercontent.com/insert3coins/insert3coins/main/assets/repo-pycommander.svg" alt="pycommander" width="420" />
 </a>
+<a href="https://github.com/insert3coins/VoidCompass">
+  <img src="https://raw.githubusercontent.com/insert3coins/insert3coins/main/assets/repo-VoidCompass.svg" alt="VoidCompass" width="420" />
+</a>
 <a href="https://github.com/insert3coins/NEONAMP">
   <img src="https://raw.githubusercontent.com/insert3coins/insert3coins/main/assets/repo-NEONAMP.svg" alt="NEONAMP" width="420" />
 </a>
@@ -85,6 +88,7 @@ STATUS   : ONLINE
 | CAB | GAME | HARDWARE |
 |:---:|:-----|:---------|
 | 🕹️ | **[pycommander](https://github.com/insert3coins/pycommander)** — dual-pane file manager with synthwave theming, audio preview, session persistence | `Python` `Batchfile` `PowerShell` |
+| 🧭 | **[VoidCompass](https://github.com/insert3coins/VoidCompass)** — native Windows companion for Elite Dangerous. Live journal tracking, exploration / trade / fleet / engineering tools, HUD overlays, adaptive cockpit AI | `Python` `Qt` |
 | 🎵 | **[NEONAMP](https://github.com/insert3coins/NEONAMP)** — self-hosted Winamp-style web music player with a cyberpunk neon deck. Spectrum visualizer, 10-band EQ, OBS jukebox overlay, Twitch chat commands, EBU R128 loudness normalization | `JavaScript` `Node` `Web Audio` |
 <!-- CABTABLE:END -->
 
