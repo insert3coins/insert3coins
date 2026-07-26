@@ -69,6 +69,9 @@ STATUS   : ONLINE
 <!-- CABS:START -->
 <div align="center">
 
+<a href="https://github.com/insert3coins/pycommander">
+  <img src="https://raw.githubusercontent.com/insert3coins/insert3coins/main/assets/repo-pycommander.svg" alt="pycommander" width="420" />
+</a>
 <a href="https://github.com/insert3coins/TwitchStream">
   <img src="https://raw.githubusercontent.com/insert3coins/insert3coins/main/assets/repo-TwitchStream.svg" alt="TwitchStream" width="420" />
 </a>
@@ -87,6 +90,7 @@ STATUS   : ONLINE
 <!-- CABTABLE:START -->
 | CAB | GAME | HARDWARE |
 |:---:|:-----|:---------|
+| 🕹️ | **[pycommander](https://github.com/insert3coins/pycommander)** — No description yet. | `Python` `Batchfile` `PowerShell` |
 | 🕹️ | **[TwitchStream](https://github.com/insert3coins/TwitchStream)** — A self-hosted Node.js toolkit for Twitch featuring OBS overlays, alerts, avatars, collectible cards, chat commands, moderation, points, clips, stream screens, and automation. | `HTML` `JavaScript` `CSS` |
 | 🧭 | **[VoidCompass](https://github.com/insert3coins/VoidCompass)** — native Windows companion for Elite Dangerous. Live journal tracking, exploration / trade / fleet / engineering tools, HUD overlays, adaptive cockpit AI | `Python` `Qt` |
 | 🎵 | **[NEONAMP](https://github.com/insert3coins/NEONAMP)** — self-hosted Winamp-style web music player with a cyberpunk neon deck. Spectrum visualizer, 10-band EQ, OBS jukebox overlay, Twitch chat commands, EBU R128 loudness normalization | `JavaScript` `Node` `Web Audio` |
