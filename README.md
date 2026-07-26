@@ -77,6 +77,22 @@ STATUS   : ONLINE
 
 ---
 
+### `> CONTRIBUTION GRID`
+
+<div align="center">
+
+<!-- Snake requires .github/workflows/snake.yml to have run at least once.
+     Broken image = the Action hasn't generated it yet. -->
+<img src="https://raw.githubusercontent.com/insert3coins/insert3coins/output/snake.svg" alt="contribution snake" />
+
+<br><br>
+
+<img src="https://github-readme-activity-graph.vercel.app/graph?username=insert3coins&bg_color=0D0619&color=21E6C1&line=FF4F9A&point=FFB24D&area=true&area_color=21E6C1&hide_border=false&border_color=21E6C1&radius=10" alt="activity graph" />
+
+</div>
+
+---
+
 <details>
 <summary><b><code>↑ ↑ ↓ ↓ ← → ← → B A</code></b></summary>
 
