@@ -25,7 +25,7 @@
   <text x="434" y="74" font-family="'Share Tech Mono','Consolas','Courier New',monospace" font-size="14" fill="#FFB24D" text-anchor="end" font-weight="bold">1<animate attributeName="opacity" values="0;1" dur="0.4s" begin="0.00s" fill="freeze"/></text>
   <text x="26" y="99" font-family="'Share Tech Mono','Consolas','Courier New',monospace" font-size="13" fill="#C9D1D9" letter-spacing="1">COMMITS (YR)</text>
   <line x1="200" y1="95" x2="364" y2="95" stroke="#6E5A8A" stroke-width="1" stroke-dasharray="2 4" opacity="0.55"/>
-  <text x="434" y="99" font-family="'Share Tech Mono','Consolas','Courier New',monospace" font-size="14" fill="#21E6C1" text-anchor="end" font-weight="bold">351<animate attributeName="opacity" values="0;1" dur="0.4s" begin="0.09s" fill="freeze"/></text>
+  <text x="434" y="99" font-family="'Share Tech Mono','Consolas','Courier New',monospace" font-size="14" fill="#21E6C1" text-anchor="end" font-weight="bold">360<animate attributeName="opacity" values="0;1" dur="0.4s" begin="0.09s" fill="freeze"/></text>
   <text x="26" y="124" font-family="'Share Tech Mono','Consolas','Courier New',monospace" font-size="13" fill="#C9D1D9" letter-spacing="1">PULL REQUESTS</text>
   <line x1="200" y1="120" x2="364" y2="120" stroke="#6E5A8A" stroke-width="1" stroke-dasharray="2 4" opacity="0.55"/>
   <text x="434" y="124" font-family="'Share Tech Mono','Consolas','Courier New',monospace" font-size="14" fill="#FF4F9A" text-anchor="end" font-weight="bold">1<animate attributeName="opacity" values="0;1" dur="0.4s" begin="0.18s" fill="freeze"/></text>
@@ -38,5 +38,5 @@
   <text x="26" y="199" font-family="'Share Tech Mono','Consolas','Courier New',monospace" font-size="13" fill="#C9D1D9" letter-spacing="1">FOLLOWERS</text>
   <line x1="200" y1="195" x2="364" y2="195" stroke="#6E5A8A" stroke-width="1" stroke-dasharray="2 4" opacity="0.55"/>
   <text x="434" y="199" font-family="'Share Tech Mono','Consolas','Courier New',monospace" font-size="14" fill="#FF4F9A" text-anchor="end" font-weight="bold">5<animate attributeName="opacity" values="0;1" dur="0.4s" begin="0.45s" fill="freeze"/></text>
-  <text x="26" y="214" font-family="'Share Tech Mono','Consolas','Courier New',monospace" font-size="9" fill="#6E5A8A">SELF-HOSTED // UPDATED 2026-07-26 23:31 UTC</text>
+  <text x="26" y="214" font-family="'Share Tech Mono','Consolas','Courier New',monospace" font-size="9" fill="#6E5A8A">SELF-HOSTED // UPDATED 2026-07-27 07:51 UTC</text>
 </svg>
