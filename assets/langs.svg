@@ -23,19 +23,19 @@
   <rect x="26" y="62" width="348" height="12" rx="6" fill="#140A24"/>
   <clipPath id="barclip"><rect x="26" y="62" width="348" height="12" rx="6"/></clipPath>
   <g clip-path="url(#barclip)">
-    <rect x="26.0" y="62" width="302.1" height="12" fill="#3572A5"/>
-    <rect x="328.1" y="62" width="30.8" height="12" fill="#f1e05a"/>
-    <rect x="358.9" y="62" width="8.6" height="12" fill="#e34c26"/>
-    <rect x="367.5" y="62" width="3.7" height="12" fill="#663399"/>
-    <rect x="371.2" y="62" width="2.7" height="12" fill="#dea584"/>
+    <rect x="26.0" y="62" width="301.2" height="12" fill="#3572A5"/>
+    <rect x="327.2" y="62" width="31.4" height="12" fill="#f1e05a"/>
+    <rect x="358.6" y="62" width="8.8" height="12" fill="#e34c26"/>
+    <rect x="367.4" y="62" width="3.8" height="12" fill="#663399"/>
+    <rect x="371.1" y="62" width="2.7" height="12" fill="#dea584"/>
     <rect x="373.9" y="62" width="0.1" height="12" fill="#89e051"/>
   </g>
   <rect x="26" y="95" width="10" height="10" rx="2" fill="#3572A5"/>
   <text x="44" y="104" font-family="'Share Tech Mono','Consolas','Courier New',monospace" font-size="12" fill="#C9D1D9">Python</text>
-  <text x="44" y="118" font-family="'Share Tech Mono','Consolas','Courier New',monospace" font-size="10" fill="#6E5A8A">86.8%</text>
+  <text x="44" y="118" font-family="'Share Tech Mono','Consolas','Courier New',monospace" font-size="10" fill="#6E5A8A">86.5%</text>
   <rect x="206" y="95" width="10" height="10" rx="2" fill="#f1e05a"/>
   <text x="224" y="104" font-family="'Share Tech Mono','Consolas','Courier New',monospace" font-size="12" fill="#C9D1D9">JavaScript</text>
-  <text x="224" y="118" font-family="'Share Tech Mono','Consolas','Courier New',monospace" font-size="10" fill="#6E5A8A">8.9%</text>
+  <text x="224" y="118" font-family="'Share Tech Mono','Consolas','Courier New',monospace" font-size="10" fill="#6E5A8A">9.0%</text>
   <rect x="26" y="123" width="10" height="10" rx="2" fill="#e34c26"/>
   <text x="44" y="132" font-family="'Share Tech Mono','Consolas','Courier New',monospace" font-size="12" fill="#C9D1D9">HTML</text>
   <text x="44" y="146" font-family="'Share Tech Mono','Consolas','Courier New',monospace" font-size="10" fill="#6E5A8A">2.5%</text>
@@ -49,5 +49,5 @@
   <text x="224" y="160" font-family="'Share Tech Mono','Consolas','Courier New',monospace" font-size="12" fill="#C9D1D9">Shell</text>
   <text x="224" y="174" font-family="'Share Tech Mono','Consolas','Courier New',monospace" font-size="10" fill="#6E5A8A">0.0%</text>
   <line x1="26" y1="198" x2="374" y2="198" stroke="#6E5A8A" stroke-width="1" stroke-dasharray="2 4" opacity="0.45"/>
-  <text x="26" y="214" font-family="'Share Tech Mono','Consolas','Courier New',monospace" font-size="9" fill="#6E5A8A">8 LANGUAGES // 3.9 MB OF SOURCE</text>
+  <text x="26" y="214" font-family="'Share Tech Mono','Consolas','Courier New',monospace" font-size="9" fill="#6E5A8A">8 LANGUAGES // 3.8 MB OF SOURCE</text>
 </svg>
