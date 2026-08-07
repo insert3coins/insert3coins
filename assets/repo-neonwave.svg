@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="420" height="140"
+     viewBox="0 0 420 140" role="img" aria-label="&gt; NEONWAVE">
+  <defs>
+    <linearGradient id="edge" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#21E6C1"/>
+      <stop offset="55%" stop-color="#FF4F9A"/>
+      <stop offset="100%" stop-color="#FFB24D"/>
+    </linearGradient>
+    <pattern id="scan" width="4" height="4" patternUnits="userSpaceOnUse">
+      <rect width="4" height="1" fill="#21E6C1" opacity="0.035"/>
+    </pattern>
+    <filter id="glow"><feGaussianBlur stdDeviation="2.2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+
+  <rect x="1" y="1" width="418" height="138" rx="10"
+        fill="#0D0619" stroke="url(#edge)" stroke-width="2"/>
+  <rect x="1" y="1" width="418" height="138" rx="10" fill="url(#scan)"/>
+
+  <text x="22" y="34" font-family="'Share Tech Mono','Consolas','Courier New',monospace" font-size="15" fill="#21E6C1"
+        letter-spacing="2" filter="url(#glow)">&gt; NEONWAVE</text>
+  <line x1="22" y1="45" x2="398" y2="45" stroke="#6E5A8A" stroke-width="1" opacity="0.5"/>
+
+  <text x="26" y="72" font-family="'Share Tech Mono','Consolas','Courier New',monospace" font-size="11.5" fill="#C9D1D9">Self-hosted audio editor in the browser. Waveform</text>
+  <text x="26" y="89" font-family="'Share Tech Mono','Consolas','Courier New',monospace" font-size="11.5" fill="#C9D1D9">editing, 30 effects, EBU R128 loudness, WAV/MP3</text>
+  <text x="26" y="106" font-family="'Share Tech Mono','Consolas','Courier New',monospace" font-size="11.5" fill="#C9D1D9">export. Node + Web Audio, no cloud.</text>
+  <circle cx="31" cy="116" r="5" fill="#f1e05a"/>
+  <text x="43" y="120" font-family="'Share Tech Mono','Consolas','Courier New',monospace" font-size="11" fill="#C9D1D9">JavaScript</text>
+  <text x="394" y="120" font-family="'Share Tech Mono','Consolas','Courier New',monospace" font-size="11" fill="#FFB24D" text-anchor="end">★ 0   ⑂ 0</text>
+</svg>
