@@ -23,25 +23,25 @@
   <rect x="26" y="62" width="348" height="12" rx="6" fill="#140A24"/>
   <clipPath id="barclip"><rect x="26" y="62" width="348" height="12" rx="6"/></clipPath>
   <g clip-path="url(#barclip)">
-    <rect x="26.0" y="62" width="243.8" height="12" fill="#3572A5"/>
-    <rect x="269.8" y="62" width="74.5" height="12" fill="#f1e05a"/>
-    <rect x="344.3" y="62" width="15.7" height="12" fill="#e34c26"/>
-    <rect x="360.1" y="62" width="11.5" height="12" fill="#663399"/>
-    <rect x="371.5" y="62" width="2.5" height="12" fill="#dea584"/>
+    <rect x="26.0" y="62" width="242.4" height="12" fill="#3572A5"/>
+    <rect x="268.4" y="62" width="75.8" height="12" fill="#f1e05a"/>
+    <rect x="344.2" y="62" width="15.7" height="12" fill="#e34c26"/>
+    <rect x="359.9" y="62" width="11.7" height="12" fill="#663399"/>
+    <rect x="371.6" y="62" width="2.4" height="12" fill="#dea584"/>
     <rect x="374.0" y="62" width="0.0" height="12" fill="#C1F12E"/>
   </g>
   <rect x="26" y="95" width="10" height="10" rx="2" fill="#3572A5"/>
   <text x="44" y="104" font-family="'Share Tech Mono','Consolas','Courier New',monospace" font-size="12" fill="#C9D1D9">Python</text>
-  <text x="44" y="118" font-family="'Share Tech Mono','Consolas','Courier New',monospace" font-size="10" fill="#6E5A8A">70.1%</text>
+  <text x="44" y="118" font-family="'Share Tech Mono','Consolas','Courier New',monospace" font-size="10" fill="#6E5A8A">69.7%</text>
   <rect x="206" y="95" width="10" height="10" rx="2" fill="#f1e05a"/>
   <text x="224" y="104" font-family="'Share Tech Mono','Consolas','Courier New',monospace" font-size="12" fill="#C9D1D9">JavaScript</text>
-  <text x="224" y="118" font-family="'Share Tech Mono','Consolas','Courier New',monospace" font-size="10" fill="#6E5A8A">21.4%</text>
+  <text x="224" y="118" font-family="'Share Tech Mono','Consolas','Courier New',monospace" font-size="10" fill="#6E5A8A">21.8%</text>
   <rect x="26" y="123" width="10" height="10" rx="2" fill="#e34c26"/>
   <text x="44" y="132" font-family="'Share Tech Mono','Consolas','Courier New',monospace" font-size="12" fill="#C9D1D9">HTML</text>
   <text x="44" y="146" font-family="'Share Tech Mono','Consolas','Courier New',monospace" font-size="10" fill="#6E5A8A">4.5%</text>
   <rect x="206" y="123" width="10" height="10" rx="2" fill="#663399"/>
   <text x="224" y="132" font-family="'Share Tech Mono','Consolas','Courier New',monospace" font-size="12" fill="#C9D1D9">CSS</text>
-  <text x="224" y="146" font-family="'Share Tech Mono','Consolas','Courier New',monospace" font-size="10" fill="#6E5A8A">3.3%</text>
+  <text x="224" y="146" font-family="'Share Tech Mono','Consolas','Courier New',monospace" font-size="10" fill="#6E5A8A">3.4%</text>
   <rect x="26" y="151" width="10" height="10" rx="2" fill="#dea584"/>
   <text x="44" y="160" font-family="'Share Tech Mono','Consolas','Courier New',monospace" font-size="12" fill="#C9D1D9">Rust</text>
   <text x="44" y="174" font-family="'Share Tech Mono','Consolas','Courier New',monospace" font-size="10" fill="#6E5A8A">0.7%</text>
