@@ -26,7 +26,7 @@
     <rect x="26.0" y="62" width="241.4" height="12" fill="#3572A5"/>
     <rect x="267.4" y="62" width="77.4" height="12" fill="#f1e05a"/>
     <rect x="344.8" y="62" width="15.3" height="12" fill="#e34c26"/>
-    <rect x="360.1" y="62" width="11.5" height="12" fill="#663399"/>
+    <rect x="360.2" y="62" width="11.5" height="12" fill="#663399"/>
     <rect x="371.6" y="62" width="2.4" height="12" fill="#dea584"/>
     <rect x="374.0" y="62" width="0.0" height="12" fill="#C1F12E"/>
   </g>
@@ -35,7 +35,7 @@
   <text x="44" y="118" font-family="'Share Tech Mono','Consolas','Courier New',monospace" font-size="10" fill="#6E5A8A">69.4%</text>
   <rect x="206" y="95" width="10" height="10" rx="2" fill="#f1e05a"/>
   <text x="224" y="104" font-family="'Share Tech Mono','Consolas','Courier New',monospace" font-size="12" fill="#C9D1D9">JavaScript</text>
-  <text x="224" y="118" font-family="'Share Tech Mono','Consolas','Courier New',monospace" font-size="10" fill="#6E5A8A">22.3%</text>
+  <text x="224" y="118" font-family="'Share Tech Mono','Consolas','Courier New',monospace" font-size="10" fill="#6E5A8A">22.2%</text>
   <rect x="26" y="123" width="10" height="10" rx="2" fill="#e34c26"/>
   <text x="44" y="132" font-family="'Share Tech Mono','Consolas','Courier New',monospace" font-size="12" fill="#C9D1D9">HTML</text>
   <text x="44" y="146" font-family="'Share Tech Mono','Consolas','Courier New',monospace" font-size="10" fill="#6E5A8A">4.4%</text>
