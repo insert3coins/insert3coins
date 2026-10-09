@@ -23,19 +23,19 @@
   <rect x="26" y="62" width="348" height="12" rx="6" fill="#140A24"/>
   <clipPath id="barclip"><rect x="26" y="62" width="348" height="12" rx="6"/></clipPath>
   <g clip-path="url(#barclip)">
-    <rect x="26.0" y="62" width="220.5" height="12" fill="#3572A5"/>
-    <rect x="246.5" y="62" width="84.7" height="12" fill="#f1e05a"/>
-    <rect x="331.2" y="62" width="29.5" height="12" fill="#663399"/>
-    <rect x="360.7" y="62" width="11.8" height="12" fill="#e34c26"/>
+    <rect x="26.0" y="62" width="234.1" height="12" fill="#3572A5"/>
+    <rect x="260.1" y="62" width="70.8" height="12" fill="#f1e05a"/>
+    <rect x="330.8" y="62" width="29.7" height="12" fill="#663399"/>
+    <rect x="360.5" y="62" width="12.0" height="12" fill="#e34c26"/>
     <rect x="372.5" y="62" width="1.5" height="12" fill="#dea584"/>
     <rect x="374.0" y="62" width="0.0" height="12" fill="#C1F12E"/>
   </g>
   <rect x="26" y="95" width="10" height="10" rx="2" fill="#3572A5"/>
   <text x="44" y="104" font-family="'Share Tech Mono','Consolas','Courier New',monospace" font-size="12" fill="#C9D1D9">Python</text>
-  <text x="44" y="118" font-family="'Share Tech Mono','Consolas','Courier New',monospace" font-size="10" fill="#6E5A8A">63.4%</text>
+  <text x="44" y="118" font-family="'Share Tech Mono','Consolas','Courier New',monospace" font-size="10" fill="#6E5A8A">67.3%</text>
   <rect x="206" y="95" width="10" height="10" rx="2" fill="#f1e05a"/>
   <text x="224" y="104" font-family="'Share Tech Mono','Consolas','Courier New',monospace" font-size="12" fill="#C9D1D9">JavaScript</text>
-  <text x="224" y="118" font-family="'Share Tech Mono','Consolas','Courier New',monospace" font-size="10" fill="#6E5A8A">24.3%</text>
+  <text x="224" y="118" font-family="'Share Tech Mono','Consolas','Courier New',monospace" font-size="10" fill="#6E5A8A">20.3%</text>
   <rect x="26" y="123" width="10" height="10" rx="2" fill="#663399"/>
   <text x="44" y="132" font-family="'Share Tech Mono','Consolas','Courier New',monospace" font-size="12" fill="#C9D1D9">CSS</text>
   <text x="44" y="146" font-family="'Share Tech Mono','Consolas','Courier New',monospace" font-size="10" fill="#6E5A8A">8.5%</text>
