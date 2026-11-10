@@ -23,19 +23,19 @@
   <rect x="26" y="62" width="348" height="12" rx="6" fill="#140A24"/>
   <clipPath id="barclip"><rect x="26" y="62" width="348" height="12" rx="6"/></clipPath>
   <g clip-path="url(#barclip)">
-    <rect x="26.0" y="62" width="221.9" height="12" fill="#3572A5"/>
-    <rect x="247.9" y="62" width="89.5" height="12" fill="#f1e05a"/>
-    <rect x="337.4" y="62" width="26.7" height="12" fill="#663399"/>
+    <rect x="26.0" y="62" width="221.6" height="12" fill="#3572A5"/>
+    <rect x="247.6" y="62" width="89.9" height="12" fill="#f1e05a"/>
+    <rect x="337.5" y="62" width="26.6" height="12" fill="#663399"/>
     <rect x="364.1" y="62" width="9.0" height="12" fill="#e34c26"/>
     <rect x="373.1" y="62" width="0.9" height="12" fill="#dea584"/>
     <rect x="374.0" y="62" width="0.0" height="12" fill="#C1F12E"/>
   </g>
   <rect x="26" y="95" width="10" height="10" rx="2" fill="#3572A5"/>
   <text x="44" y="104" font-family="'Share Tech Mono','Consolas','Courier New',monospace" font-size="12" fill="#C9D1D9">Python</text>
-  <text x="44" y="118" font-family="'Share Tech Mono','Consolas','Courier New',monospace" font-size="10" fill="#6E5A8A">63.8%</text>
+  <text x="44" y="118" font-family="'Share Tech Mono','Consolas','Courier New',monospace" font-size="10" fill="#6E5A8A">63.7%</text>
   <rect x="206" y="95" width="10" height="10" rx="2" fill="#f1e05a"/>
   <text x="224" y="104" font-family="'Share Tech Mono','Consolas','Courier New',monospace" font-size="12" fill="#C9D1D9">JavaScript</text>
-  <text x="224" y="118" font-family="'Share Tech Mono','Consolas','Courier New',monospace" font-size="10" fill="#6E5A8A">25.7%</text>
+  <text x="224" y="118" font-family="'Share Tech Mono','Consolas','Courier New',monospace" font-size="10" fill="#6E5A8A">25.8%</text>
   <rect x="26" y="123" width="10" height="10" rx="2" fill="#663399"/>
   <text x="44" y="132" font-family="'Share Tech Mono','Consolas','Courier New',monospace" font-size="12" fill="#C9D1D9">CSS</text>
   <text x="44" y="146" font-family="'Share Tech Mono','Consolas','Courier New',monospace" font-size="10" fill="#6E5A8A">7.7%</text>
